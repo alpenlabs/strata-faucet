@@ -1,9 +1,9 @@
 services:
-  strata-faucet:
+  alpen-faucet:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: strata_faucet
+    container_name: alpen_faucet
     env_file:
       ./.env
     ports:

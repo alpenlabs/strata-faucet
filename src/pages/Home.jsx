@@ -6,7 +6,7 @@ import { getClaimAmount, getPowChallenge, submitClaim } from "../utils/api";
 import { findSolution } from "../utils/solver";
 import "../styles/index.css";
 
-const STRATA_BLOCKSCOUT_URL = import.meta.env.VITE_STRATA_BLOCKSCOUT_URL;
+const ALPEN_BLOCKSCOUT_URL = import.meta.env.VITE_ALPEN_BLOCKSCOUT_URL;
 
 export default function Home() {
   const { walletAddress, connectWallet, connectManual, disconnectWallet } = useWallet();
@@ -122,7 +122,7 @@ export default function Home() {
   if (!walletAddress && !walletConnected) {
     return (
       <div className="home-container">
-        <img src="/logo.png" alt="Strata Logo" className="home-logo" />
+        <img src="/logo.png" alt="Alpen Logo" className="home-logo" />
 
         <div className="home-box">
           <div className="home-title">Get test BTC</div>
@@ -144,7 +144,7 @@ export default function Home() {
                 value={inputAddress}
                 onChange={handleInputChange}
               />
-              {isInputValid === false && <span className="error-message">Invalid entry. Please enter a valid Strata address.</span>}
+              {isInputValid === false && <span className="error-message">Invalid entry. Please enter a valid Alpen address.</span>}
               <button className="enter-button mt-2" disabled={!isInputValid} onClick={handleEnterAddress}>
                 Enter
               </button>
@@ -158,7 +158,7 @@ export default function Home() {
   // Step 2: Show Wallet Info + Confirmation
   return (
     <div className="home-container">
-      <img src="/logo.png" alt="Strata Logo" className="home-logo" />
+      <img src="/logo.png" alt="Alpen Logo" className="home-logo" />
 
       {/* Wallet Info (Top Right) */}
       <div className="wallet-info">
@@ -181,7 +181,7 @@ export default function Home() {
             <span className="grid-label">TXID: </span>
             <span className="grid-value">
               {txId ? (
-                <a href={`${STRATA_BLOCKSCOUT_URL}/tx/${txId}`} target="_blank" rel="noopener noreferrer" className="txid-link">
+                <a href={`${ALPEN_BLOCKSCOUT_URL}/tx/${txId}`} target="_blank" rel="noopener noreferrer" className="txid-link">
                   {txId.slice(0, 6)}...{txId.slice(-4)}
                 </a>
               ) : (

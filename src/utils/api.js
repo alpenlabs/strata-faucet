@@ -1,4 +1,4 @@
-const STRATA_FAUCET_URL = import.meta.env.VITE_STRATA_FAUCET_URL;
+const ALPEN_FAUCET_API_URL = import.meta.env.VITE_ALPEN_FAUCET_API_URL;
 
 /**
  * Handles a fetch response, auto-detecting JSON or plain text.
@@ -49,7 +49,7 @@ async function safeFetchJson(url, context) {
  * @returns {Promise<Object|null>} Response from the backend.
  */
 export function getClaimAmount(chain) {
-    return safeFetchJson(`${STRATA_FAUCET_URL}/sats_to_claim/${chain}`, "Failed to get claim amount");
+    return safeFetchJson(`${ALPEN_FAUCET_API_URL}/sats_to_claim/${chain}`, "Failed to get claim amount");
 }
 
 /**
@@ -57,7 +57,7 @@ export function getClaimAmount(chain) {
  * @returns {Promise<Object|null>} Response from the backend.
  */
 export function getPowChallenge(chain) {
-    return safeFetchJson(`${STRATA_FAUCET_URL}/pow_challenge/${chain}`, "Failed to fetch Proof of Work");
+    return safeFetchJson(`${ALPEN_FAUCET_API_URL}/pow_challenge/${chain}`, "Failed to fetch Proof of Work");
 }
 
 /**
@@ -68,7 +68,7 @@ export function getPowChallenge(chain) {
  */
 export async function submitClaim(solution, address) {
     return safeFetchJson(
-        `${STRATA_FAUCET_URL}/claim_l2/${solution}/${address}`,
+        `${ALPEN_FAUCET_API_URL}/claim_l2/${solution}/${address}`,
         "Failed to claim test BTC"
     );
 }

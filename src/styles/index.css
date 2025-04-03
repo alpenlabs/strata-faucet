@@ -7,26 +7,26 @@
     /* color-scheme: light dark; */
     /* color: rgba(255, 255, 255, 0.87); */
     /* background-color: #242424; */
-    background-color: var(--strata-sand-light);
-    --strata-terracotta-light: #DF896D;
-    --strata-terracotta-med: #BC512F;
-    --strata-terracotta-sharp: #5A2514;
-    --strata-sand-light: #FFF7ED;
-    --strata-sand-med: #FFEAC1;
-    --strata-sand-sharp: #F2CE85;
-    --strata-marengo-light: #778B91;
-    --strata-marengo-med: #526971;
-    --strata-marengo-sharp: #273F46;
+    background-color: var(--alpen-sand-light);
+    --alpen-terracotta-light: #DF896D;
+    --alpen-terracotta-med: #BC512F;
+    --alpen-terracotta-sharp: #5A2514;
+    --alpen-sand-light: #FFF7ED;
+    --alpen-sand-med: #FFEAC1;
+    --alpen-sand-sharp: #F2CE85;
+    --alpen-marengo-light: #778B91;
+    --alpen-marengo-med: #526971;
+    --alpen-marengo-sharp: #273F46;
 }
 
 a {
     font-weight: 500;
-    color: var(--strata-terracotta-med);
+    color: var(--alpen-terracotta-med);
     text-decoration: inherit;
 }
 
 a:hover {
-    color: var(--strata-terracotta-sharp);
+    color: var(--alpen-terracotta-sharp);
 }
 
 body {
@@ -53,24 +53,24 @@ button {
     font-size: 1em;
     font-weight: 500;
     /* font-family: inherit; */
-    background-color: var(--strata-sand-med);
+    background-color: var(--alpen-sand-med);
     cursor: pointer;
     transition: border-color 0.25s;
 }
 
 button:hover {
-    border-color: var(--strata-terracotta-med);
+    border-color: var(--alpen-terracotta-med);
 }
 
 button:focus,
 button:focus-visible {
-    outline: 4px auto var(--strata-terracotta-med);
+    outline: 4px auto var(--alpen-terracotta-med);
 }
 
 @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
-        background-color: var(--strata-sand-med);
+        background-color: var(--alpen-sand-med);
     }
 
     a:hover {
@@ -78,7 +78,7 @@ button:focus-visible {
     }
 
     button {
-        background-color: var(--strata-terracotta-med);
+        background-color: var(--alpen-terracotta-med);
     }
 }
 
@@ -114,7 +114,7 @@ button:focus-visible {
     height: 20rem;
     text-align: center;
     border-radius: 3rem;
-    border: 1px solid var(--strata-terracotta-med);
+    border: 1px solid var(--alpen-terracotta-med);
     
     /* ✅ Center content inside */
     display: flex;
@@ -182,15 +182,15 @@ button:focus-visible {
 }
 
 .confirm-button:disabled {
-    background-color: var(--strata-terracotta-light);
+    background-color: var(--alpen-terracotta-light);
 }
 
 /* Enter button */
 .enter-button {
-    color: var(--strata-terracotta-med);
+    color: var(--alpen-terracotta-med);
     margin-top: 2rem;
     background-color: white;
-    border: 1px solid var(--strata-terracotta-med);
+    border: 1px solid var(--alpen-terracotta-med);
     width: 25%;
 }
 
@@ -213,7 +213,7 @@ button:focus-visible {
 
 /* Claim txid link */
 .txid-link {
-    color: var(--strata-terracotta-med);
+    color: var(--alpen-terracotta-med);
     text-decoration: underline;
 }
 
@@ -238,7 +238,7 @@ button:focus-visible {
 }
 
 .address-button {
-    background: var(--strata-terracotta-med);
+    background: var(--alpen-terracotta-med);
     color: white;
     border: none;
     cursor: pointer;
@@ -256,7 +256,7 @@ button:focus-visible {
     position: absolute;
     top: 100%;
     right: 0;
-    background: var(--strata-terracotta-med);
+    background: var(--alpen-terracotta-med);
     border-radius: 0.25rem;
     width: 100%; /* ✅ Ensures it matches button width */
     z-index: 1000;
@@ -268,7 +268,7 @@ button:focus-visible {
     padding: 0.75rem;
     text-align: left;
     border: none;
-    background: var(--strata-terracotta-med);
+    background: var(--alpen-terracotta-med);
     color: white;
     cursor: pointer;
     font-size: 0.9rem;
